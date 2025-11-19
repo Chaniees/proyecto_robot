@@ -1,0 +1,10 @@
+﻿# Ejecutables
+*.exe
+*.dll
+
+# Carpetas de build
+output/
+bin/
+
+# Configuración de IDE
+.vscode/
