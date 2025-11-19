@@ -1,0 +1,19 @@
+﻿# Ejecutables
+*.exe
+*.dll
+
+# Carpetas de build
+output/
+bin/
+
+# Configuración de IDE
+.vscode/
+
+# Archivos temporales
+*.tmp
+*.log
+*.o
+
+# Sistema
+.DS_Store
+Thumbs.db
