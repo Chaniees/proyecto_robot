@@ -6,26 +6,21 @@ echo ========================================
 echo    ROBOT DELIVERY SIMULATOR
 echo ========================================
 echo.
-echo Compilando juego...
+echo Iniciando simulador...
 echo.
 
-:: Crear carpeta bin si no existe
-if not exist "bin" mkdir bin
+:: Agregar DLLs al PATH
+set PATH=%~dp0bin;%~dp0libraries;%PATH%
 
-:: Compilar el c?digo principal con SFML
-g++ luffy.cpp -o bin\RobotDeliverySimulator.exe -I libraries -L libraries -lsfml-graphics -lsfml-window -lsfml-system
-
-:: Ejecutar el juego
+:: Ejecutar el juego directamente
 if exist "bin\RobotDeliverySimulator.exe" (
-    echo Ejecutando simulador...
+    echo Ejecutando juego...
     bin\RobotDeliverySimulator.exe
 ) else (
-    echo ERROR: No se pudo compilar el juego
+    echo ERROR: Ejecutable no encontrado
     echo.
-    echo Soluciones:
-    echo 1. Instala MinGW-w64 
-    echo 2. Verifica que libraries/ tenga los archivos SFML
-    echo 3. Ejecuta como Administrador
+    echo Descarga el proyecto completo desde GitHub
+    echo https://github.com/Chaniees/proyecto_robot
     echo.
     pause
 )
